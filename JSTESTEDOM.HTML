@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>DOM</title>
+</head>
+<style>
+    .tipo1 {
+        color: red;
+        font-size: 16px;
+        background-color: yellow;
+        padding: 10px;
+        border: 2px solid black;
+    }
+    .tipo2 {
+        color: green;
+        font-size: 18px;
+        background-color: lightblue;
+        padding: 15px;
+        border: 2px dashed blue;
+    }
+</style>
+<body>
+    <div id="d1">Conteúdo Original</div>
+    <label for="radio">ESCOLHA O ESTILO</label><br>
+    <input type="radio" id="tipo1" name="estilo" value="tipo1" checked>Estilo 1
+    <input type="radio" id="tipo2" name="estilo" value="tipo2">Estilo 2
+    <input type="radio" id="tipo3" name="estilo" value="tipo3">LIMPAR<br><br>
+    <button onclick="alterar()">Clique para Alterar</button>
+    <script>
+        const alterar=() => {
+            // Seleciona o elemento com id "d1"
+            const d1 = document.getElementById("d1");
+            if (document.getElementById("tipo1").checked) {
+                // Se o radio tipo1 estiver selecionado
+                d1.innerHTML = "Conteúdo Alterado para o Tipo 1";
+                d1.className = "tipo1";
+            } 
+            if (document.getElementById("tipo2").checked) {
+                // Se o radio tipo2 estiver selecionado
+                d1.innerHTML = "Conteúdo Alterado para o Tipo 2";
+                d1.className = "tipo2";
+            }
+            else if (document.getElementById("tipo3").checked) {
+                // Se o radio tipo3 estiver selecionado
+                d1.innerHTML = "Conteúdo Original";
+                d1.className = "";
+            }
+        
+        }
+    </script>
+</body>
+</html>
