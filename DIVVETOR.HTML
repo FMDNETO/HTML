@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>DIVISÃO DE DOIS INTEIROS COM VETORES</title>
+</head>
+<body>
+    <H1>DIVISÃO DE DOIS INTEIROS COM VETORES</H1>
+    <p>Vamos dividir dois numeros inteiros adicionando os valores em vetores!</p>
+    <script>
+        var numeros = []
+        var resultado;
+        numeros[0] = prompt ("Digite o primeiro número inteiro: ");
+        if (numeros[0] == null || numeros[0] == "") {
+            alert("Você não digitou o primeiro número!");
+        } else if (numeros[0] < 0) {
+            alert("O número deve ser positivo!");
+        } 
+        numeros[1] = prompt("Digite o segundo número inteiro: ");
+        if (numeros[1] == null || numeros[1] == "") {
+            alert("Você não digitou o segundo número!");
+        } else if (numeros[1] <= 0) {
+            alert("O número deve ser positivo e diferente de zero!");
+        }
+        
+        resultado = numeros[0] / numeros[1];
+        alert("O resultado da divisão é: " + resultado);
+
+
+    </script>
+
+</body>
+</html>
